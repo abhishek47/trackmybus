@@ -24,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.HashMap;
+import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity implements LocationListener {
 
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         if (sharedPreferences.getString(TRACKER_KEY, null) == null) {
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString(TRACKER_KEY, "1234");
+            editor.putString(TRACKER_KEY, UUID.randomUUID().toString().substring(0, 7));
             editor.commit();
         }
 
