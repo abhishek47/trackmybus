@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "688162944608",
+    "firebase_url": "https://trackmybus-1507822687907.firebaseio.com",
+    "project_id": "trackmybus-1507822687907",
+    "storage_bucket": "trackmybus-1507822687907.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688162944608:android:64ca4aec3b1298dc",
+        "android_client_info": {
+          "package_name": "com.trumpets.trackmybus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688162944608-ek6618d5oscrf8rju897m6fur4bv55gd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trumpets.trackmybus",
+            "certificate_hash": "adde0d01be7862a3ff0718f61058595bd8dd0143"
+          }
+        },
+        {
+          "client_id": "688162944608-auggi5pnnv03d39pp04k43rameuohv00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6SLZmUvYA8gT9-aGFGfZtdglY_tq45EM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688162944608-auggi5pnnv03d39pp04k43rameuohv00.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context="com.trumpets.trackmybus.AddBusActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText"
+        android:textSize="18dp"
+        android:layout_marginTop="3dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="Bus Tracking ID" />
+
+    <EditText
+        android:id="@+id/tidEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="8dp"
+        android:hint="Tracking ID"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText"
+        android:textSize="18dp"
+        android:layout_marginTop="3dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="Bus Plate No." />
+
+    <EditText
+        android:id="@+id/busEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="8dp"
+        android:hint="Ex. 0869"/>
+
+    <Button
+        android:id="@+id/trackBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track Bus " />
+
+
+</LinearLayout>

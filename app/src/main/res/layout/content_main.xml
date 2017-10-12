@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.trumpets.trackmybus.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Your Current Location"
+        android:textColor="#000"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_above="@+id/currentLocation"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Tracker ID"
+        android:textColor="#000"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_above="@+id/trackerId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/trackerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:text="389674"
+        android:textColor="#585858"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/currentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="57dp"
+        android:text="38.9674, 72.546"
+        android:textColor="#545454"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Use the above tracking Id in another app to track your location.For sharing your location in realtime keep this activity running."
+        android:layout_below="@+id/trackerId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
