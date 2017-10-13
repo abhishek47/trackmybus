@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         Criteria criteria = new Criteria();
         String bestProvider = locationManager.getBestProvider(criteria, true);
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
+        
         Location location = locationManager.getLastKnownLocation(bestProvider);
         final double latitude = location.getLatitude();
         final double longitude = location.getLongitude();
@@ -102,10 +103,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         loc.put("lng", longitude);
 
 
-
-
         DatabaseReference locations = busesRef.push();
         locations.setValue(loc);
+
     }
 
     @Override
@@ -126,13 +126,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        Location location = locationManager.getLastKnownLocation(bestProvider);
-        final double latitude = location.getLatitude();
-        final double longitude = location.getLongitude();
 
-        currentLocation.setText(String.valueOf(round(latitude, 6)) + ", " + String.valueOf(round(longitude, 6)));
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, this);
 
-        syncLocation();
+
+
 
 
     }
@@ -172,17 +170,19 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     public void onLocationChanged(Location location) {
         final double latitude = location.getLatitude();
         final double longitude = location.getLongitude();
+
         HashMap<String, Double> loc = new HashMap<String, Double>();
 
         loc.put("lat", latitude);
         loc.put("lng", longitude);
 
 
-
         DatabaseReference locations = busesRef.push();
         locations.setValue(loc);
 
         currentLocation.setText(String.valueOf(round(latitude, 6)) + ", " + String.valueOf(round(longitude, 6)));
+
+
     }
 
     @Override
