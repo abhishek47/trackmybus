@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        
+
         Location location = locationManager.getLastKnownLocation(bestProvider);
         final double latitude = location.getLatitude();
         final double longitude = location.getLongitude();
